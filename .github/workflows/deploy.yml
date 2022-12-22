@@ -1,0 +1,22 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI/CD
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Deploy to cPanel FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: <local github folder -- use ./ for repository root>
+        server-dir: <remote_dir -- use / for root>
+        protocol: ftps
+        security: strict
+        dry-run: false
