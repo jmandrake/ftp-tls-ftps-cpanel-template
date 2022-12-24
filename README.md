@@ -2,17 +2,19 @@
 
 
 # ftps-tls-cpanel-template
-Deploy to a cPanel FTP account using explicit FTP over TLS (FTPS)
+Deploy files to a cPanel FTP account using explicit FTP over TLS (FTPS)
 
 ## Quick start:
 
-1) Clone this repo and add the Github Action secrets required in the workflow yml file:
+1) Clone this repo and add the Github Action secrets required in the workflow file: deploy.yml
 
         server: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         
-2) Set the local and remote paths in the yaml file. 
+2) Set the local and remote paths in the deploy.yml file. 
+
+
 
 ## About the FTP settings:
 
