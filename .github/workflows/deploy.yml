@@ -20,8 +20,10 @@ jobs:
         server: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: <local github folder -- use ./ for repository root>
-        server-dir: <remote_dir -- use / for root>
+        # local-dir: <local github folder -- use ./ for repository root>
+        local-dir: ./
+        # server-dir: <remote_dir -- use / for root>
+        server-dir: /
         protocol: ftps
         security: strict
         dry-run: false
