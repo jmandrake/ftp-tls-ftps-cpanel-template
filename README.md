@@ -62,9 +62,9 @@ jobs:
 
 ## Note: 
 - I used ./ for the local Github repo's directory, but you should be able to use $GITHUB_WORKSPACE/
-- The server-dir should be whatever subfolder to upload the files to but it needs to end with a / or just use / it the ftp account's home is where you want to upload the files to.
+- The server-dir should be whatever subfolder to upload the files to but it needs to end with a / or just use / if the ftp account's home is where you want to upload the files to.
 - This template can be used for Python, PHP, Javascript, or anything you need that has to be uploaded via FTP/TLS. The Makefile is set up for Python in this example.
-- on: workflow_dispatch: This option lets you re-run jobs by just clicking a button in the Actions section
+- on: workflow_dispatch: This option lets you re-run jobs by just clicking a button in the Github Actions section
 
 
 
